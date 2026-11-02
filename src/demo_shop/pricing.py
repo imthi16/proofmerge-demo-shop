@@ -18,7 +18,7 @@ def price_for(tenant_id: str, sku: str) -> float:
 
 
 def bulk_discount(total: float) -> float:
-    """Return discounted total: 10% off when total >= 100."""
-    if total >= 100:
+    """Return discounted total: 10% off when total > 100."""
+    if total > 100:
         return total * 0.9
     return total
